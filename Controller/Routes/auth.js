@@ -43,3 +43,5 @@ route.put('/user', (req,res) => {
         if(err) res.status(400).send(err)
     })
 })
+
+module.exports = route
