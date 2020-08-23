@@ -1,5 +1,6 @@
 // setting up the routes for the server
 const route = require('express').Router();
+const userModel = require(../../Model/userModel);
 
 // the /user is the end point of the route
 route.post('/user', (req,res) => {
