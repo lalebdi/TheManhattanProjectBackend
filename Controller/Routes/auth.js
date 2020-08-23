@@ -13,7 +13,7 @@ route.post('/user', (req,res) => {
 //  put is for updates
 route.put('/user', (req,res) => {
     const {id, name, password, role} = req.body
-    userModel.findByIdAndUpdate(id).then((user) => {
+    userModel.findByIdAndUpdate(id,{name,password,role}).then((user) => {
         if(!user) return res.status(400).send('no user')
         res.send('updated')
     })
